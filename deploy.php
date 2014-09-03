@@ -3,6 +3,6 @@
         if ($_POST['user'] != "")
         {
             $user = $_POST['user'];
-            exec("cd {$user}; git pull https://github.com/dotaleague/{$user}.git master 2>&1", $output, $return_var);
+            echo exec("cd {$user}; git pull https://github.com/dotaleague/{$user}.git master 2>&1", $output, $return_var);
             header("Refresh:3; url={$user}");
         }
